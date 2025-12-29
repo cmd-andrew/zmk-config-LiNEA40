@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,
+            //スクロール方向を逆転,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -97,33 +97,11 @@
             bindings = <
 &lt 6 W               &kp E                   &kp LS(N9)  &kp I          &kp LS(N0)                              &kp F            &kp S  &kp Y                &kp H          &kp P
 &kp A                 &kp U                   &kp X       &kp C          &kp O                                   &kp R            &kp K  &kp T                &kp D          &kp N
-&lt 5 Q               &mt AMPERSAND QUESTION  &kp J       &kp V          &lt 3 COMMA                             &kp Z            &kp G  &kp B                &kp L          &kp M
-&mt LEFT_SHIFT LA(P)  &mkp MB4                &mkp MB5    &kp LC(LS(L))  &lt 4 PERIOD  &kp SPACE    &lt 2 ENTER  &lt 4 BACKSPACE         &mt RIGHT_ALT MINUS  &mt LCTRL TAB  &mt RIGHT_GUI LANGUAGE_1
+&lt 5 Q               &mt AMPERSAND QUESTION  &kp J       &kp V          &lt 1 COMMA                             &kp Z            &kp G  &kp B                &kp L          &kp M
+&mt LEFT_SHIFT LA(P)  &mkp MB4                &mkp MB5    &kp LC(LS(L))  &lt 2 PERIOD  &kp SPACE    &lt 4 ENTER  &lt 2 BACKSPACE         &mt RIGHT_ALT MINUS  &mt LCTRL TAB  &mt RIGHT_GUI LANGUAGE_1
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_UP C_VOLUME_DOWN>;
-        };
-
-        Mouse_No.1 {
-            bindings = <
-&kp ESCAPE            &mkp MB4              &mkp MB5       &mkp MB2      &mkp MB1                         &kp F3      &mkp MB4  &mkp MB5   &mkp MB1        &mkp MB2
-&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &kp LS(UP)    &none                            &kp RG(F3)  &kp UP    &mkp MB3   &msc SCRL_DOWN  &msc SCRL_UP
-&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LEFT)   &kp LS(DOWN)  &kp LS(RIGHT)                    &kp LEFT    &kp DOWN  &kp RIGHT  &msc SCRL_LEFT  &msc SCRL_RIGHT
-&trans                &mkp MB4              &mkp MB5       &trans        &trans         &trans    &trans  &trans                &trans     &trans          &trans
-            >;
-
-            sensor-bindings = <&re_kp LG(PLUS) LG(MINUS)>;
-        };
-
-        Mouse_No.2 {
-            bindings = <
-&kp ESCAPE            &mkp MB4              &mkp MB5       &mkp MB2         &mkp MB1                         &kp HOME               &kp LS(LEFT)  &kp LS(UP)    &kp LS(RIGHT)   &kp RG(RA(BACKSLASH))
-&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &kp LS(LC(TAB))  &kp LC(TAB)                      &kp RG(RIGHT_CONTROL)  &kp UP        &kp LS(DOWN)  &msc SCRL_DOWN  &msc SCRL_UP
-&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LG(F))  &kp LC(LEFT)     &kp LC(RIGHT)                    &kp LEFT               &kp DOWN      &kp RIGHT     &msc SCRL_LEFT  &msc SCRL_RIGHT
-&trans                &kp LG(Z)             &kp LG(Y)      &trans           &trans         &trans    &trans  &kp DELETE                           &trans        &trans          &trans
-            >;
-
-            sensor-bindings = <&re_kp LG(PLUS) LG(MINUS)>;
         };
 
         Number {
@@ -146,6 +124,28 @@
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        };
+
+        Mouse_No.1 {
+            bindings = <
+&kp ESCAPE            &mkp MB4              &mkp MB5       &mkp MB2      &mkp MB1                         &kp F3      &mkp MB4  &mkp MB5   &mkp MB1        &mkp MB2
+&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &kp LS(UP)    &tog 3                           &kp RG(F3)  &kp UP    &mkp MB3   &msc SCRL_DOWN  &msc SCRL_UP
+&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LEFT)   &kp LS(DOWN)  &kp LS(RIGHT)                    &kp LEFT    &kp DOWN  &kp RIGHT  &msc SCRL_LEFT  &msc SCRL_RIGHT
+&trans                &mkp MB4              &mkp MB5       &trans        &trans         &trans    &trans  &trans                &trans     &trans          &trans
+            >;
+
+            sensor-bindings = <&re_kp LG(PLUS) LG(MINUS)>;
+        };
+
+        Mouse_No.2 {
+            bindings = <
+&kp ESCAPE            &mkp MB4              &mkp MB5       &mkp MB2         &mkp MB1                         &kp HOME               &kp LS(LEFT)  &kp LS(UP)    &kp LS(RIGHT)   &kp RG(RA(BACKSLASH))
+&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &kp LS(LC(TAB))  &kp LC(TAB)                      &kp RG(RIGHT_CONTROL)  &kp UP        &kp LS(DOWN)  &msc SCRL_DOWN  &msc SCRL_UP
+&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LG(F))  &kp LC(LEFT)     &kp LC(RIGHT)                    &kp LEFT               &kp DOWN      &kp RIGHT     &msc SCRL_LEFT  &msc SCRL_RIGHT
+&trans                &kp LG(Z)             &kp LG(Y)      &trans           &trans         &trans    &trans  &kp DELETE                           &trans        &trans          &trans
+            >;
+
+            sensor-bindings = <&re_kp LG(PLUS) LG(MINUS)>;
         };
 
         Media {
