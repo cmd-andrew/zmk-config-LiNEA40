@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,
+            //スクロール方向を逆転,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -97,11 +97,33 @@
             bindings = <
 &lt 6 W                   &kp E                   &kp AT_SIGN  &kp I       &kp LEFT_BRACKET                            &kp F          &kp S  &kp Y                &kp H          &kp P
 &kp A                     &kp U                   &kp X        &kp C       &kp O                                       &kp R          &kp K  &kp T                &kp D          &kp N
-&lt 5 Q                   &mt AMPERSAND QUESTION  &kp J        &kp V       &lt 1 COMMA                                 &kp Z          &kp G  &kp B                &kp L          &kp M
-&mt LEFT_SHIFT LC(LS(L))  &mkp MB4                &mkp MB5     &kp C_MUTE  &lt 2 PERIOD      &kp SPACE    &lt 4 ENTER  &kp BACKSPACE         &mt RIGHT_ALT MINUS  &mt LCTRL TAB  &kp LANG_HIRAGANA
+&lt 5 Q                   &mt AMPERSAND QUESTION  &kp J        &kp V       &lt 3 COMMA                                 &kp Z          &kp G  &kp B                &kp L          &kp M
+&mt LEFT_SHIFT LC(LS(L))  &mkp MB4                &mkp MB5     &kp C_MUTE  &lt 4 PERIOD      &kp SPACE    &lt 2 ENTER  &kp BACKSPACE         &mt RIGHT_ALT MINUS  &mt LCTRL TAB  &mt RIGHT_COMMAND LANGUAGE_1
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        };
+
+        Mouse_No.1 {
+            bindings = <
+&kp ESCAPE            &none                 &mkp MB3       &mkp MB2         &mkp MB1                         &kp LC(LG(DOWN))  &mkp MB4  &mkp MB5   &mkp MB1        &mkp MB2
+&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &kp LS(LC(TAB))  &kp LC(TAB)                      &kp RG(LC(UP))    &kp UP    &mkp MB3   &msc SCRL_DOWN  &msc SCRL_UP
+&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &tog 1         &kp LC(LEFT)     &kp LC(RIGHT)                    &kp LEFT          &kp DOWN  &kp RIGHT  &msc SCRL_LEFT  &msc SCRL_RIGHT
+&trans                &mkp MB4              &mkp MB5       &trans           &trans         &trans    &trans  &trans                      &trans     &trans          &trans
+            >;
+
+            sensor-bindings = <&re_kp LG(PLUS) LG(MINUS)>;
+        };
+
+        Mouse_No.2 {
+            bindings = <
+&kp ESCAPE            &mkp MB4              &mkp MB5       &mkp MB2         &mkp MB1                         &kp HOME               &kp LS(LEFT)  &kp LS(UP)    &kp LS(RIGHT)   &kp RG(BACKSLASH)
+&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &kp LS(LC(TAB))  &kp LC(TAB)                      &kp RG(RIGHT_CONTROL)  &kp UP        &kp LS(DOWN)  &msc SCRL_DOWN  &msc SCRL_UP
+&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LG(F))  &kp LC(LEFT)     &kp LC(RIGHT)                    &kp LEFT               &kp DOWN      &kp RIGHT     &msc SCRL_LEFT  &msc SCRL_RIGHT
+&trans                &kp LG(Z)             &kp LG(Y)      &trans           &trans         &trans    &trans  &trans                               &trans        &trans          &trans
+            >;
+
+            sensor-bindings = <&re_kp LG(PLUS) LG(MINUS)>;
         };
 
         Number {
@@ -120,32 +142,10 @@
 &kp ESCAPE         &kp LEFT_BRACE       &kp LEFT_BRACKET          &kp RIGHT_BRACE   &kp RIGHT_BRACKET                        &kp HOME         &kp END             &kp RG(W)      &kp RS(RG(V))  &kp RS(RG(NUMBER_4))
 &kp DOUBLE_QUOTES  &kp SEMICOLON        &kp LEFT_PARENTHESIS      &kp COLON         &kp RIGHT_PARENTHESIS                    &kp RS(RC(TAB))  &kp RC(TAB)         &kp RG(T)      &kp RG(L)      &kp RS(RG(F))
 &kp SQT            &kp GRAVE            &kp EQUAL                 &kp LS(MINUS)     &kp LS(COMMA)                            &mkp MB4         &kp RC(LEFT_ARROW)  &kp RC(RIGHT)  &mkp MB5       &kp RG(M)
-&trans             &kp LG(RIGHT_BRACE)  &kp LG(NON_US_BACKSLASH)  &kp LG(LC(DOWN))  &lt 2 RS(PERIOD)       &trans    &trans  &kp DELETE                           &trans         &trans         &trans
+&trans             &kp LG(RIGHT_BRACE)  &kp LG(NON_US_BACKSLASH)  &kp LG(LC(DOWN))  &lt 4 RS(PERIOD)       &trans    &trans  &kp DELETE                           &trans         &trans         &trans
             >;
 
             sensor-bindings = <&re_kp C_BRI_UP C_BRI_DN>;
-        };
-
-        Mouse_No.1 {
-            bindings = <
-&kp ESCAPE            &mkp MB4              &mkp MB5       &mkp MB2         &mkp MB1                         &kp LC(LG(DOWN))  &mkp MB4  &mkp MB5   &mkp MB1        &mkp MB2
-&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &kp LS(LC(TAB))  &kp LC(TAB)                      &kp RG(LC(UP))    &kp UP    &mkp MB3   &msc SCRL_DOWN  &msc SCRL_UP
-&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &tog 3         &kp LC(LEFT)     &kp LC(RIGHT)                    &kp LEFT          &kp DOWN  &kp RIGHT  &msc SCRL_LEFT  &msc SCRL_RIGHT
-&trans                &mkp MB4              &mkp MB5       &trans           &trans         &trans    &trans  &trans                      &trans     &trans          &trans
-            >;
-
-            sensor-bindings = <&re_kp LG(PLUS) LG(MINUS)>;
-        };
-
-        Mouse_No.2 {
-            bindings = <
-&kp ESCAPE            &mkp MB4              &mkp MB5       &mkp MB2         &mkp MB1                         &kp HOME               &kp LS(LEFT)  &kp LS(UP)    &kp LS(RIGHT)   &kp RG(BACKSLASH)
-&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &kp LS(LC(TAB))  &kp LC(TAB)                      &kp RG(RIGHT_CONTROL)  &kp UP        &kp LS(DOWN)  &msc SCRL_DOWN  &msc SCRL_UP
-&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LG(F))  &kp LC(LEFT)     &kp LC(RIGHT)                    &kp LEFT               &kp DOWN      &kp RIGHT     &msc SCRL_LEFT  &msc SCRL_RIGHT
-&trans                &kp LG(Z)             &kp LG(Y)      &trans           &trans         &trans    &trans  &trans                               &trans        &trans          &trans
-            >;
-
-            sensor-bindings = <&re_kp LG(PLUS) LG(MINUS)>;
         };
 
         Media {
