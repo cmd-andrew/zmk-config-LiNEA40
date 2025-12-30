@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -101,10 +101,10 @@
 
         default_layer {
             bindings = <
-&lt 6 W                   &kp E                   &kp AT_SIGN  &kp I       &kp LEFT_BRACKET                            &kp F          &kp S  &kp Y                &kp H          &kp P
-&kp A                     &kp U                   &kp X        &kp C       &kp O                                       &kp R          &kp K  &kp T                &kp D          &kp N
-&lt 5 Q                   &mt AMPERSAND QUESTION  &kp J        &kp V       &lt 3 COMMA                                 &kp Z          &kp G  &kp B                &kp L          &kp M
-&mt LEFT_SHIFT LC(LS(L))  &mkp MB4                &mkp MB5     &kp C_MUTE  &lt 4 PERIOD      &kp SPACE    &lt 2 ENTER  &kp BACKSPACE         &mt RIGHT_ALT MINUS  &mt LCTRL TAB  &mt RIGHT_COMMAND LANG_HIRAGANA
+&lt 6 W                    &kp E                   &kp AT_SIGN  &kp I       &kp LEFT_BRACKET                            &kp F          &kp S  &kp Y                &kp H          &kp P
+&kp A                      &kp U                   &kp X        &kp C       &kp O                                       &kp R          &kp K  &kp T                &kp D          &kp N
+&lt 5 Q                    &mt AMPERSAND QUESTION  &kp J        &kp V       &lt 3 COMMA                                 &kp Z          &kp G  &kp B                &kp L          &kp M
+&mt LEFT_SHIFT LANGUAGE_2  &mkp MB4                &mkp MB5     &kp C_MUTE  &lt 4 PERIOD      &kp SPACE    &lt 2 ENTER  &kp BACKSPACE         &mt RIGHT_ALT MINUS  &mt LCTRL TAB  &mt RIGHT_COMMAND LANGUAGE_1
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -168,7 +168,7 @@
         WIRELESS {
             bindings = <
 &trans  &none  &kp LC(LG(Q))  &kp LC(LG(DOWN))  &kp LC(LG(UP))                           &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&none   &none  &none          &kp GLOBE         &kp C                                    &none           &none         &none         &none         &none
+&none   &none  &kp LC(LS(L))  &kp GLOBE         &kp C                                    &none           &none         &none         &none         &none
 &none   &none  &none          &kp LG(LEFT)      &kp LG(BACKSLASH)                        &none           &none         &none         &none         &bt BT_CLR
 &none   &none  &none          &none             &none              &none    &bootloader  &studio_unlock                &none         &none         &bt BT_CLR_ALL
             >;
