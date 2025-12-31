@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -177,7 +177,7 @@
 &kp LC(LG(Q))  &kp LG(LEFT)   &kp LA(LG(UP))    &kp LG(INT_YEN)   &none                           &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &none          &kp LS(LC(L))  &kp LA(LG(DOWN))  &kp GLOBE         &kp C                           &none           &none         &none         &none         &none
 &kp LG(M)      &none          &none             &mkp MB2          &mkp MB1                        &none           &none         &none         &none         &bt BT_CLR
-&none          &none          &none             &kp LA(LG(DOWN))  &none     &none    &bootloader  &studio_unlock                &none         &none         &bt BT_CLR_ALL
+&none          &none          &none             &kp LA(LG(DOWN))  &trans    &none    &bootloader  &studio_unlock                &none         &none         &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&re_kp C_BRI_UP C_BRI_DN>;
